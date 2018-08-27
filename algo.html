@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script type="text/javascript" 
+        src="http://www.atmarkit.co.jp/fcoding/articles/algorithm/01/nabeatsu.js"
+        charset="UTF-8">
+        </script>
+        <script type="text/javascript">
+        var count = 1;
+
+        function nabe(){
+            document.getElementById("num").innerHTML = count;
+            if((count % 3) == 0){
+                henkan()
+            }
+            if(String(count).indexOf("3")> -1){
+                henkan()
+            }
+            count++;
+
+            if(count <= 40){
+                setTimeout("nabe()",1000);
+            }
+        }
+        </script>
+    </head>
+    <body onload="nabe()">
+        <div id="num" style="font-size: 80px"></div>
+    </body>
+</html>
